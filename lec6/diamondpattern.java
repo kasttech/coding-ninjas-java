@@ -1,12 +1,14 @@
 import java.util.Scanner;
+import java.lang.Math;
 public class Main
 {
 	public static void main(String[] args) {
 		int i,j,n;
 		Scanner str = new Scanner(System.in);
 		n = str.nextInt();
-		for(i=1;i<=n;i++){
-		    for(j=n;j>=1;j--){
+		int mid =(int)(n+1)/2;
+		for(i=1;i<=mid;i++){
+		    for(j=mid;j>=1;j--){
 		        if(j-i>0){
 		            System.out.print(" ");
 		        }else
@@ -14,20 +16,24 @@ public class Main
 		    }
 		    for(j=i;j>1;j--){
 		        System.out.print("*");
+		    }
+		    System.out.println();
+		 }
+		 
+		 for(i=1;i<=n-mid;i++){
+		    for(j=1;j<=mid;j++){
+		        if(j-i<=0)
+		            System.out.print(" ");
+		        else 
+		            System.out.print("*");
+		    }
+		    for(j=n-mid;j>=1;j--){
+		        if(j-i>0){
+		            System.out.print("*");
+		        }else
+		        System.out.print(" ");
 		    }
 		    System.out.println();
 		}
-	/*	for(i=1;i<=n;i++){
-		    for(j=n;j>=1;j--){
-		        if(j-i>0){
-		            System.out.print(" ");
-		        }else
-		        System.out.print(i-j+1);
-		    }
-		    for(j=i;j>1;j--){
-		        System.out.print(j-1);
-		    }
-		    System.out.println();
-		}*/
 	}
 }
