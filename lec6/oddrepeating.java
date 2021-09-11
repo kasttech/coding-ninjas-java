@@ -12,7 +12,7 @@ public class Main
 		        if(nextnum>=2*n)
 		            nextnum = nextnum%(2*n);
 		    }
-		    nextnum = i*2 - 1;
+		    nextnum = nextnum + 2;
 		    System.out.println();
 		}
 	}
